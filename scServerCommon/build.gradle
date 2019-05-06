@@ -21,12 +21,7 @@ repositories {
 dependencies {
     compile project(':scCommon')
     
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Finchley.RELEASE', ext: 'pom'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.0.3.RELEASE'
-    
 }
 
-dependencyManagement {
-	imports { 
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT"
-	}
-}
