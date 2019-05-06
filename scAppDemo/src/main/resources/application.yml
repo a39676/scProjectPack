@@ -1,0 +1,19 @@
+# this is demo project
+
+spring:
+  application:
+    name: service-hi
+# mvc:
+#   view:
+#     prefix: /WEB-INF/jsp/
+#     suffix: .jsp
+    
+server:
+  port: 8763
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+#   instance:
+#     preferIpAddress: true
