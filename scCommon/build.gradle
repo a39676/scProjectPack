@@ -19,10 +19,10 @@ repositories {
     }
 }
 
-ext {
-    springCloudVersion = 'Finchley.RELEASE'
-    springBootVersion = '2.0.9.RELEASE'
-}
+//ext {
+//    springCloudVersion = 'Finchley.RELEASE'
+//    springBootVersion = '2.0.9.RELEASE'
+//}
 
 dependencies {
 	// mail start
@@ -36,8 +36,8 @@ dependencies {
     compile group: 'commons-codec', name: 'commons-codec', version: '1.12'
     // commons end
     
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '${springBootVersion}'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '${springBootVersion}'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.9.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.9.RELEASE'
 }
 
 

@@ -15,7 +15,7 @@ buildscript {
 }
 
 bootJar {
-	baseName = 'scServer'
+	baseName = 'scAppDemo'
 	version = '0.0.1'
 }
 
