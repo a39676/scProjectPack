@@ -1,0 +1,34 @@
+// scAppCommon
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'scDemo'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+		dirs 'libs/'
+    }
+}
+
+dependencies {
+    compile project(':scCommon')
+    
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '${springBootVersion}'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '${springBootVersion}'
+    
+}
+
+dependencyManagement {
+	imports { 
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT"
+	}
+}
