@@ -35,6 +35,9 @@ dependencies {
     // commons start
     compile group: 'commons-codec', name: 'commons-codec', version: '1.12'
     // commons end
+    
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '${springBootVersion}'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '${springBootVersion}'
 }
 
 
