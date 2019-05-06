@@ -1,0 +1,22 @@
+# spring:
+#   application:
+#    name: eureka-server
+
+# server:
+#   port: 8761
+
+# eureka:
+#   instance:
+#     hostname: http://127.0.0.1
+#   client:
+#     serviceUrl:
+#       defaultZone: http://127.0.0.1:8762/erueka/
+#     registerWithEureka: true
+#     fetchRegistry: true
+
+# logging:
+#   level:
+#     com:
+#       netflix:
+#         eureka: OFF
+#         discovery: OFF
