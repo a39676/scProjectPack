@@ -21,7 +21,7 @@ repositories {
 dependencies {
     compile project(':scCommon')
     
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.1.1.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-server', version: '2.0.3.RELEASE'
     
 }
 
