@@ -8,8 +8,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          searchPaths: respo
+          uri: https://github.com/a39676/scProjectPack/
+          searchPaths: configFolder
           username:
           password:
     
