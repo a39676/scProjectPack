@@ -1,0 +1,2 @@
+rootProject.name = 'scZuul'
+includeFlat  'scServerCommon', 'scCommon'
