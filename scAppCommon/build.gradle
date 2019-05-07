@@ -22,7 +22,6 @@ dependencies {
     compile project(':scCommon')
     
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.3.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Finchley.RELEASE', ext: 'pom'
     
     compile group: 'com.netflix.servo', name: 'servo-core', version: '0.12.26'
     

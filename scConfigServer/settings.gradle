@@ -1,0 +1,2 @@
+rootProject.name = 'scConfigServer'
+includeFlat  'scCommon'
