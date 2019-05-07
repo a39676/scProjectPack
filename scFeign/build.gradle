@@ -1,4 +1,4 @@
-// scServer
+// scFeign
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -15,7 +15,7 @@ buildscript {
 }
 
 bootJar {
-	baseName = 'scServer'
+	baseName = 'scFeign'
 	version = '0.0.1'
 }
 
@@ -39,4 +39,9 @@ repositories {
 dependencies {
     compile project(':scCommon')
     compile project(':scServerCommon')
+    
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.0.3.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.6.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.0.3.RELEASE'
+    
 }	
