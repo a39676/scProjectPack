@@ -1,0 +1,6 @@
+# test yml file
+  
+server:
+  port: 8888
+
+keyA: valueA
