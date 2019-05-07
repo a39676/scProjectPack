@@ -1,4 +1,4 @@
-// scFeign
+// scRibbon
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -15,7 +15,7 @@ buildscript {
 }
 
 bootJar {
-	baseName = 'scFeign'
+	baseName = 'scRibbon'
 	version = '0.0.1'
 }
 
