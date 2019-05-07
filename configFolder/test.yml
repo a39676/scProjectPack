@@ -1,6 +1,25 @@
 # test yml file
-  
-server:
-  port: 8888
 
-keyA: valueA
+---
+
+profiles: dev
+server:
+  port: 10001
+
+keyA: valueDev
+
+---
+
+profiles: master
+server:
+  port: 10000
+  
+---
+
+keyA: valueMaster
+
+profiles: test
+server:
+  port: 10002
+
+keyA: valueTest
