@@ -39,4 +39,7 @@ repositories {
 dependencies {
     compile project(':scCommon')
     compile project(':scServerCommon')
+    
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-ribbon', version: '2.0.3.RELEASE'
+    
 }	
