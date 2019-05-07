@@ -38,6 +38,7 @@ repositories {
 
 dependencies {
     compile project(':scCommon')
+    compile project(':scAppCommon')
     
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.4.RELEASE'
     
