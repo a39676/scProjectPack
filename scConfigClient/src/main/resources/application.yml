@@ -8,7 +8,7 @@ spring:
     name: config-client
   cloud:
     config:
-      # uri: http://localhost:8888
+      # uri: http://localhost:8888 # 未经过eureka server --> 直连时, 配置configuration server 访问地址
       name: neo-config
       label: master
       profile: dev
@@ -19,7 +19,7 @@ spring:
       enabled: true
       trace:
         enabled: true
-  # rabbitmq:
+  # rabbitmq: # 2019-05-09 待重新部署 rabbitMQ
     # host: localhost
     # port: 5672
     # username: guest
@@ -29,7 +29,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: '*' 
     
 eureka:
   client:

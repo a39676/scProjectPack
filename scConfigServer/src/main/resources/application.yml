@@ -8,6 +8,7 @@ spring:
       label: master
       server:
         git:
+          # 可配置远程/本地仓库 
           #uri: https://github.com/a39676/scProjectPack/
           uri: D:/scProjectPack/
           searchPaths: configFolder
