@@ -8,7 +8,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/a39676/scProjectPack/
+          #uri: https://github.com/a39676/scProjectPack/
+          uri: D:/scProjectPack/
           searchPaths: configFolder
           username:
           password:
