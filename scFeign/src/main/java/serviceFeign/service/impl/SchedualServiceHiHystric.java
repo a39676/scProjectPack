@@ -12,4 +12,9 @@ public class SchedualServiceHiHystric implements SchedualServiceHi {
 		return "sorry " + name;
 	}
 
+	@Override
+	public String testRoleMapper() {
+		return "testMapper error";
+	}
+
 }

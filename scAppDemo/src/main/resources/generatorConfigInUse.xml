@@ -5,8 +5,8 @@
   
 <generatorConfiguration>    
 	<!-- 数据库驱动-->    
-    <classPathEntry  location="D:/jar/sql/mysql-connector-java-8.0.15.jar"/>    
-    <context id="DB2Tables"  targetRuntime="MyBatis3">    
+    <classPathEntry  location="D:/jar/sql/mysql-connector-java-8.0.16.jar"/>    
+    <context id="DB2Tables"  targetRuntime="MyBatis3">
         <commentGenerator>    
             <property name="suppressDate" value="true"/>    
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
@@ -23,11 +23,12 @@
         </jdbcConnection> 
            
         <javaTypeResolver>    
-            <property name="forceBigDecimals" value="false"/>    
+            <property name="forceBigDecimals" value="false"/>
+            <property name="useJSR310Types" value="true"/>    
         </javaTypeResolver>  
           
         <!-- 生成模型的包名和位置-->    
-        <javaModelGenerator targetPackage="demo.woqu.domain.po" targetProject="ssms">    
+        <javaModelGenerator targetPackage="scAppDemo.base.domain.po" targetProject="scAppDemo">    
             <property name="enableSubPackages" value="true"/>    
             <property name="trimStrings" value="true"/> 
             <!-- for MyBatis3 / MyBatis3Simple
@@ -38,18 +39,18 @@
         </javaModelGenerator>    
         
         <!-- 生成映射文件的包名和位置-->    
-        <sqlMapGenerator targetPackage="demo.woqu.mapper" targetProject="ssms">    
+        <sqlMapGenerator targetPackage="scAppDemo.base.mapper" targetProject="scAppDemo">    
             <property name="enableSubPackages" value="true"/>    
         </sqlMapGenerator>    
         
         <!-- 生成DAO的包名和位置-->    
-        <javaClientGenerator type="XMLMAPPER" targetPackage="demo.woqu.mapper" targetProject="ssms">    
+        <javaClientGenerator type="XMLMAPPER" targetPackage="scAppDemo.base.mapper" targetProject="scAppDemo">    
             <property name="enableSubPackages" value="true"/>    
         </javaClientGenerator>
           
-        <table tableName="ptusers_original">
-        	<property name="tableName" value="ptusers_original"></property>
-        	<property name="domainObjectName" value="PTUsersOriginal" ></property>
+        <table tableName="roles">
+        	<property name="tableName" value="roles"></property>
+        	<property name="domainObjectName" value="roles" ></property>
             <property name="generatedKey" value="false"></property>
             <property name="enableSelectByPrimaryKey" value="true"></property>
             <property name="enableUpdateByPrimaryKey" value="true"></property>

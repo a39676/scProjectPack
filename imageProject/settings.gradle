@@ -1,0 +1,2 @@
+rootProject.name = 'imageProject'
+includeFlat  'scCommon', 'scAppCommon'

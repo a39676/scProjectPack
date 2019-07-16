@@ -39,6 +39,8 @@ dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Finchley.RELEASE', ext: 'pom'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.9.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.9.RELEASE'
+    
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.0.9.RELEASE'
 }
 
 
