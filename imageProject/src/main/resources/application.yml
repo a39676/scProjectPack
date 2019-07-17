@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: service-hi
+    name: service-image
   redis:
     database: 0
     host: 127.0.0.1

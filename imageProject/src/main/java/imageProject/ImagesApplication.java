@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = {"scAppDemo.base", "scAppDemo.config"})
-@ComponentScan(basePackages = {"scAppDemo.test"})
+@ComponentScan(basePackages = {"imageProject.base", "imageProject.config"})
+@ComponentScan(basePackages = {"imageProject.test"})
 @EnableDiscoveryClient
 public class ImagesApplication {
 	
