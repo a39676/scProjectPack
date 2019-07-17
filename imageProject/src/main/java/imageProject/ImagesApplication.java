@@ -11,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"imageProject.base", "imageProject.config"})
 @ComponentScan(basePackages = {"imageProject.test"})
 @EnableDiscoveryClient
+
 public class ImagesApplication {
 	
 	public static void main(String[] args) {
