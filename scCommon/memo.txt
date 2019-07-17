@@ -2,3 +2,5 @@ configuration 相关功能, 未实现动态刷新,
 	curl post localhost:8881/actuator/bus-refresh?destination=neo-config:** 
 	return 500
 	待重新部署rabbitMQ 后再重试 
+	
+	可否动态填写 application.yml

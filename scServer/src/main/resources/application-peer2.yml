@@ -10,7 +10,7 @@
 #     hostname: http://127.0.0.1
 #   client:
 #     serviceUrl:
-#       defaultZone: http://127.0.0.1:8761/erueka/
+#       defaultZone: http://127.0.0.1:10000/erueka/
 #     registerWithEureka: true
 #     fetchRegistry: true
 
