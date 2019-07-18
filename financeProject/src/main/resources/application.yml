@@ -1,8 +1,8 @@
-# this is image project
+# this is finance project
 
 spring:
   application:
-    name: ${service.name.image}
+    name: ${service.name.finance}
   cloud:
     config:
       name: neo-config
@@ -27,7 +27,7 @@ spring:
 #     suffix: .jsp
     
 server:
-  port: ${service.port.image}
+  port: ${service.port.finance}
   
 eureka:
   client:

@@ -2,10 +2,17 @@
 
 spring:
   application:
-    name: service-ribbon
-    
+    name: ${service.name.ribbon}
+  cloud:
+    config:
+      name: neo-config
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: config-server
 server:
-  port: 8765
+  port: ${service.port.ribbon}
   
 eureka:
   client:

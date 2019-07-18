@@ -14,9 +14,17 @@ public class ConfigClientController {
 	@Value("${neo.hello}")
 	private String hello;
 	
+	@Value("${testValue}")
+	private String testValue;
+	
 	@RequestMapping(value = Urls.hi)
 	public String hi(){
 		return hello;
+	}
+	
+	@RequestMapping("testValue")
+	public String testValue(){
+		return testValue;
 	}
 
 }

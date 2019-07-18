@@ -1,7 +1,7 @@
 # this is config-client
 
 server:
-  port: 8881
+  port: 19999
   
 spring:
   application:
@@ -19,11 +19,11 @@ spring:
       enabled: true
       trace:
         enabled: true
-  # rabbitmq: # 2019-05-09 待重新部署 rabbitMQ
-    # host: localhost
-    # port: 5672
-    # username: guest
-    # password: guest
+  rabbitmq:
+    host: 45.76.205.204
+    port: 5672
+    username: u1
+    password: something
 
 management:
   endpoints:
@@ -35,3 +35,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka
+
+testValue: ${testValue}

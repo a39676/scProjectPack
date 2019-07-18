@@ -2,10 +2,18 @@
 
 spring:
   application:
-    name: service-zuul
+    name: ${service.name.zuul}
+  cloud:
+    config:
+      name: neo-config
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: config-server
     
 server:
-  port: 10001
+  port: ${service.port.zuul}
   
 eureka:
   client:
