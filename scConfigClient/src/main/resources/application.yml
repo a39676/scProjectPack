@@ -16,21 +16,6 @@ spring:
       discovery:
         enabled: true
         serviceId: config-service
-    # bus:
-    #   enabled: true
-    #   trace:
-    #     enabled: true
-  rabbitmq:
-    host: 45.76.205.204
-    port: 5672
-    username: 
-    password: 
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*' 
     
 eureka:
   client:
