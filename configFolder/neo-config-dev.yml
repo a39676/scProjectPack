@@ -1,2 +1,21 @@
 neo.hello: hello im dev update on local
 testValue: testValue init
+
+service:
+  name:
+    hi: serviceHi
+    config: serviceConfig
+    ribbon: serviceRibbon
+    feign: serviceFeign
+    zuul: serviceZuul
+    finance: serviceFinance
+    image: serviceImage
+
+  port:
+    hi: 10020
+    config: 10011
+    ribbon: 10012
+    feign: 10013
+    zuul: 10014
+    finance: 10020
+    image: 10021
