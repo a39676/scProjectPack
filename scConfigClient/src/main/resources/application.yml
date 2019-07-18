@@ -22,8 +22,8 @@ spring:
   rabbitmq:
     host: 45.76.205.204
     port: 5672
-    username: u1
-    password: something
+    username: 
+    password: 
 
 management:
   endpoints:
