@@ -18,6 +18,9 @@ public class TestController {
 	
 	@Value("${server.port}")
 	private String port;
+	
+	@Value("${neo.hello}")
+	private String hello;
 
 	@Autowired
 	private TestService testService;
@@ -26,6 +29,12 @@ public class TestController {
 	@ResponseBody
     public String home(@RequestParam(value = "name", defaultValue = "tester") String name) {
         return "hi " + name + " ,i am from port:" + port;
+    }
+	
+	@RequestMapping("hello")
+	@ResponseBody
+    public String hello(@RequestParam(value = "name", defaultValue = "tester") String name) {
+        return "hi " + name + " ,message: " + hello;
     }
 	
 	@GetMapping("/roleMapper")

@@ -2,15 +2,7 @@
 
 spring:
   application:
-    name: ${service.name.hi}
-  cloud:
-    config:
-      name: neo-config
-      label: master
-      profile: dev
-      discovery:
-        enabled: true
-        serviceId: config-server
+    name: serviceHi
   redis:
     database: 0
     host: 127.0.0.1
@@ -27,7 +19,7 @@ spring:
 #     suffix: .jsp
     
 server:
-  port: ${service.port.hi}
+  port: 10020
   
 eureka:
   client:
@@ -45,4 +37,4 @@ logging:
     console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
     file: "[%p] [%d{yyyy-MM-dd HH:mm:ss}][%c]%m%n [%thread] %-5level %logger{36}"
       
-  file: /home/u1/logs/ssms.log
+  file: /home/u1/logs/scAppDemo.log
