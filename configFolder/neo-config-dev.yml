@@ -1,4 +1,5 @@
 neo.hello: hello im dev update on local
+testValue: testValue init
 
 service:
   name:
