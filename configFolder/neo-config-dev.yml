@@ -3,17 +3,17 @@ testValue: testValue init
 
 service:
   name:
-    hi: serviceHi
-    config: serviceConfig
-    ribbon: serviceRibbon
-    feign: serviceFeign
-    zuul: serviceZuul
-    finance: serviceFinance
-    image: serviceImage
+    hi: hi-service
+    config: config-service
+    ribbon: ribbon-service
+    feign: feign-service
+    zuul: zuul-service
+    finance: finance-service
+    image: image-service
 
   port:
     hi: 10020
-    config: 10011
+    config: 8888
     ribbon: 10012
     feign: 10013
     zuul: 10014

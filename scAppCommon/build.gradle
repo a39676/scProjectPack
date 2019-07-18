@@ -26,6 +26,8 @@ dependencies {
     compile group: 'com.netflix.servo', name: 'servo-core', version: '0.12.26'
     
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.0.9.RELEASE'
+    
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.4.RELEASE'
 	
 	// orms start
 	// mybatis

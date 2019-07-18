@@ -11,20 +11,12 @@ import constant.Urls;
 @RefreshScope
 public class ConfigClientController {
 
-	@Value("${neo.hello}")
-	private String hello;
-	
-	@Value("${testValue}")
-	private String testValue;
+	@Value("${service.name.hi}")
+	private String serviceNameHi;
 	
 	@RequestMapping(value = Urls.hi)
 	public String hi(){
-		return hello;
-	}
-	
-	@RequestMapping("testValue")
-	public String testValue(){
-		return testValue;
+		return serviceNameHi;
 	}
 
 }

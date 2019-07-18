@@ -15,7 +15,7 @@ spring:
       profile: dev
       discovery:
         enabled: true
-        serviceId: config-server
+        serviceId: config-service
     # bus:
     #   enabled: true
     #   trace:
@@ -37,4 +37,3 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:10000/eureka
 
-testValue: ${testValue}

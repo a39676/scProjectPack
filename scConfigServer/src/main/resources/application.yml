@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: config-server
+    name: config-service
   cloud:
     config:
       label: master
@@ -16,7 +16,7 @@ spring:
           password:
     
 server:
-  port: 10011
+  port: 8888
   
 eureka:
   client:

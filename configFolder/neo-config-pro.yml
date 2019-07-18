@@ -1,1 +1,18 @@
-neo.hello: hello im pro 2
+service:
+  name:
+    hi: hi-service
+    config: config-service
+    ribbon: ribbon-service
+    feign: feign-service
+    zuul: zuul-service
+    finance: finance-service
+    image: image-service
+
+  port:
+    hi: 10020
+    config: 8888
+    ribbon: 10012
+    feign: 10013
+    zuul: 10014
+    finance: 10020
+    image: 10021
