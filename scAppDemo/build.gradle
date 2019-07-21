@@ -40,9 +40,6 @@ dependencies {
     compile project(':scCommon')
     compile project(':scAppCommon')
     
-    // rabbitMQ
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.0.9.RELEASE'
-    
 	// mysql
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
 	

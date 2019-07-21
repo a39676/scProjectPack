@@ -6,6 +6,8 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import scAppDemo.config.constant.MQQueueConstant;
+
 @Component
 public class Sender {
 
@@ -15,7 +17,7 @@ public class Sender {
 	public void send(String message) {
 		String context = "hello: " + message + new Date();
 		System.out.println("sender:" + context);
-		this.rabbitTemplate.convertAndSend("hello", context);
+		this.rabbitTemplate.convertAndSend(MQQueueConstant.hello, context);
 	}
 	
 }

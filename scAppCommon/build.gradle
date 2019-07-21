@@ -28,6 +28,9 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.0.9.RELEASE'
     
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.4.RELEASE'
+    
+    // rabbitMQ
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.0.9.RELEASE'
 	
 	// orms start
 	// mybatis
