@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import constant.Urls;
 import scAppDemo.base.domain.po.Roles;
-import scAppDemo.mq.send.Sender;
+import scAppDemo.mq.send.SimpleSender;
 import scAppDemo.test.service.TestService;
 
 @Controller
@@ -26,7 +26,7 @@ public class TestController {
 	private TestService testService;
 	
 	@Autowired
-	private Sender sender;
+	private SimpleSender sender;
 	
 	@RequestMapping(Urls.hi)
 	@ResponseBody
