@@ -8,11 +8,11 @@ import scAppDemo.config.constant.MQQueueConstant;
 
 @Component
 @RabbitListener(queues = MQQueueConstant.hello)
-public class Receiver {
+public class SimpleReceiver {
 
 	@RabbitHandler
-	public void process(String hello) {
-		System.out.println("receiver:" + hello);
+	public void process(String mq) {
+		System.out.println("receiver: " + mq);
 	}
 
 }

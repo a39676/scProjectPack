@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import scAppDemo.config.constant.MQQueueConstant;
 
 @Component
-public class Sender {
+public class SimpleSender {
 
 	@Autowired
 	private AmqpTemplate rabbitTemplate;
