@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import constant.Urls;
 import scAppDemo.base.domain.po.Roles;
+import scAppDemo.mq.send.AckProducer;
 import scAppDemo.mq.send.SimpleSender;
 import scAppDemo.test.service.TestService;
 
@@ -27,6 +28,9 @@ public class TestController {
 	
 	@Autowired
 	private SimpleSender sender;
+	
+	@Autowired
+	private AckProducer ackProducer;
 	
 	@RequestMapping(Urls.hi)
 	@ResponseBody
@@ -50,7 +54,14 @@ public class TestController {
 	@ResponseBody
 	public String mqSender(@RequestParam(value = "m", defaultValue = "tester") String m) {
 		sender.send(m);
-		return "t";
+		return m;
+	}
+	
+	@GetMapping("/ackSender")
+	@ResponseBody
+	public String ackSender(@RequestParam(value = "m", defaultValue = "tester") String m) {
+		ackProducer.send(m);
+		return m;
 	}
 	
 }

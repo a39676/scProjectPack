@@ -2,7 +2,7 @@ package scAppDemo.mq.send;
 
 import java.util.Date;
 
-import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,12 +12,12 @@ import scAppDemo.config.constant.MQQueueConstant;
 public class SimpleSender {
 
 	@Autowired
-	private AmqpTemplate rabbitTemplate;
+	private RabbitTemplate rabbitTemplate;
 
 	public void send(String message) {
 		String context = "hello: " + message + new Date();
 		System.out.println("sender:" + context);
 		this.rabbitTemplate.convertAndSend(MQQueueConstant.hello, context);
 	}
-	
+
 }
