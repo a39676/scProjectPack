@@ -24,7 +24,7 @@ zuul:
   routes:
     api-a:
       path: /api-a/**
-      serviceId: service-ribbon
+      serviceId: ${service.name.ribbon}
     api-b:
       path: /api-b/**
-      serviceId: service-feign
+      serviceId: ${service.name.feign}
