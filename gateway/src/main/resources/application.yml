@@ -7,7 +7,7 @@ spring:
     config:
       failFast: true
       name: neo-config
-      label: master
+      label: dev
       profile: dev
       discovery:
         enabled: true
