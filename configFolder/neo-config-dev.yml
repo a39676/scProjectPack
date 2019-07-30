@@ -12,7 +12,7 @@ service:
     image: image-service
 
   port:
-    hi: 20020
+    hi: 20019
     config: 8888
     ribbon: 20012
     feign: 20013

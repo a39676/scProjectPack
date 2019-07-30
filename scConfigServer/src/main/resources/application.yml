@@ -9,8 +9,8 @@ spring:
       server:
         git:
           # 可配置远程/本地仓库 
-          uri: https://github.com/a39676/scProjectPack/
-          # uri: D:/scProjectPack/
+          # uri: https://github.com/a39676/scProjectPack/
+          uri: D:/myPacks/scProjectPack
           searchPaths: configFolder
           username:
           password:
