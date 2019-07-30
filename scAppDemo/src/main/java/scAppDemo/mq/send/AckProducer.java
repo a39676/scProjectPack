@@ -4,7 +4,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import scAppDemo.config.constant.MQQueueConstant;
+import scAppCommon.constant.MQQueueConstant;
 
 @Component
 public class AckProducer {

@@ -1,4 +1,4 @@
-package scAppDemo.config.constant;
+package scAppCommon.constant;
 
 public class MQQueueConstant {
 	
