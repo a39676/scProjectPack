@@ -5,6 +5,7 @@ service:
   name:
     hi: hi-service
     config: config-service
+    gateway: gateway
     ribbon: ribbon-service
     feign: feign-service
     zuul: zuul-service
@@ -14,6 +15,7 @@ service:
   port:
     hi: 20019
     config: 8888
+    gateway: 20001
     ribbon: 20012
     feign: 20013
     zuul: 20014
