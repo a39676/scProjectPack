@@ -1,2 +1,2 @@
-rootProject.name = 'gateWay'
+rootProject.name = 'gateway'
 includeFlat  'scCommon', 'scAppCommon'

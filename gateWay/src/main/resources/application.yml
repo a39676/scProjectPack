@@ -1,8 +1,8 @@
-# this is demo project
+# this is gateway project
 
 spring:
   application:
-    name: ${service.name.hi}
+    name: ${service.name.gateway}
   cloud:
     config:
       failFast: true
@@ -15,8 +15,8 @@ spring:
   rabbitmq:
     host: 45.76.205.204
     port: 5672
-    username: u1
-    password: something
+    username: 
+    password: 
 
   redis:
     database: 0
@@ -34,7 +34,7 @@ spring:
 #     suffix: .jsp
         
 server:
-  port: ${service.port.hi}
+  port: ${service.port.gateway}
 
 eureka:
   client:
