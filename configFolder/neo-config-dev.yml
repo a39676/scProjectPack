@@ -12,10 +12,10 @@ service:
     image: image-service
 
   port:
-    hi: 10020
+    hi: 20020
     config: 8888
-    ribbon: 10012
-    feign: 10013
-    zuul: 10014
-    finance: 10020
-    image: 10021
+    ribbon: 20012
+    feign: 20013
+    zuul: 20014
+    finance: 20020
+    image: 20021
