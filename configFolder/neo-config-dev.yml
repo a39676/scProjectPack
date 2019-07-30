@@ -1,3 +1,4 @@
+envName: dev
 neo.hello: hello im dev update 
 testValue: testValue init
 
