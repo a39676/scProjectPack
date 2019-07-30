@@ -1,9 +1,11 @@
 package gateway.base.user.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import gateway.base.user.pojo.po.Users;
 
+@Mapper
 public interface UserRegistMapper {
 	
 	int isUserExists(String userName);

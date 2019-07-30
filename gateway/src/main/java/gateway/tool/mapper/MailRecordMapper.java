@@ -2,11 +2,13 @@ package gateway.tool.mapper;
 
 import java.util.Date;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import gateway.tool.pojo.param.InsertNewMailRecordParam;
 import gateway.tool.pojo.po.MailRecord;
 
+@Mapper
 public interface MailRecordMapper {
     int insert(MailRecord record);
 

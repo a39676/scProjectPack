@@ -12,8 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-import gateway.config.customComponent.SnowFlake;
-
 @EnableWebMvc // <mvc:annotation-driven />
 @Configuration
 @EnableScheduling // 开启定时任务支持
@@ -49,11 +47,6 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 		viewResolver.setSuffix(".jsp");
 		viewResolver.setOrder(1);
 		return viewResolver;
-	}
-
-	@Bean
-	public SnowFlake getSnowFlake() {
-		return new SnowFlake();
 	}
 
 }

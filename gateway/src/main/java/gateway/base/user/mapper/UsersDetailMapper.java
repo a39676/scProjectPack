@@ -2,6 +2,7 @@ package gateway.base.user.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import gateway.base.user.pojo.bo.UserMailAndMailKeyBO;
@@ -9,6 +10,7 @@ import gateway.base.user.pojo.dto.FindActiveEmailDTO;
 import gateway.base.user.pojo.dto.UpdateDuplicateEmailDTO;
 import gateway.base.user.pojo.po.UsersDetail;
 
+@Mapper
 public interface UsersDetailMapper {
 	int insert(UsersDetail record);
 

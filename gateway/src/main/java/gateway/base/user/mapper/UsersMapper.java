@@ -3,6 +3,7 @@ package gateway.base.user.mapper;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import gateway.base.user.pojo.dto.ResetFailAttemptDTO;
@@ -11,6 +12,7 @@ import gateway.base.user.pojo.po.UserAttempts;
 import gateway.base.user.pojo.po.Users;
 import gateway.base.user.pojo.po.UsersDetail;
 
+@Mapper
 public interface UsersMapper {
 
 	int insert(Users record);

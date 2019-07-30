@@ -2,12 +2,14 @@ package gateway.base.user.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import gateway.base.user.pojo.dto.FindAuthsConditionDTO;
 import gateway.base.user.pojo.po.Auth;
 import gateway.base.user.pojo.po.AuthExample;
 
+@Mapper
 public interface AuthMapper {
     long countByExample(AuthExample example);
 
