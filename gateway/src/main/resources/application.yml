@@ -1,0 +1,51 @@
+# this is gateway project
+
+spring:
+  application:
+    name: ${service.name.gateway}
+  cloud:
+    config:
+      failFast: true
+      name: neo-config
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: config-service
+  rabbitmq:
+    host: 45.76.205.204
+    port: 5672
+    username: 
+    password: 
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 
+    pool.max-active: 8
+    pool.max-wait: -1
+    pool.max-idle: 8
+    pool.min-idle: 0
+    timeout: 2000
+        
+server:
+  port: ${service.port.gateway}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka
+
+feign.hystrix.enabled: true
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    demo.test.mapper: DEBUG
+    demo.tool.mapper: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "[%p] [%d{yyyy-MM-dd HH:mm:ss}][%c]%m%n [%thread] %-5level %logger{36}"
+      
+  file: /home/u1/logs/scAppDemo.log
