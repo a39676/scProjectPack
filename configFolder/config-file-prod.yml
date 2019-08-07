@@ -1,0 +1,29 @@
+neo.hello: hello im dev update 
+testValue: testValue init in config file
+
+service:
+  name:
+    hi: hi-service
+    config: config-service
+    gateway: gateway
+    ribbon: ribbon-service
+    feign: feign-service
+    zuul: zuul-service
+    finance: finance-service
+    image: image-service
+
+  port:
+    hi: 20019
+    config: 8888
+    gateway: 20001
+    ribbon: 20012
+    feign: 20013
+    zuul: 20014
+    finance: 20020
+    image: 20021
+
+rabbit_mq: 
+  host: 
+  port: 5672
+  username: 
+  password: 
