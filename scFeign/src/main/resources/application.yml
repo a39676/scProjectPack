@@ -1,16 +1,20 @@
 # this is service-feign
 
+envName: dev
+branchName: dev
+
 spring:
   application:
     name: ${service.name.feign}
   cloud:
     config:
-      name: neo-config
-      label: master
-      profile: dev
+      failFast: true
+      name: config-file
+      label: ${branchName}
+      profile: ${envName}
       discovery:
         enabled: true
-        serviceId: config-server
+        serviceId: config-service
     
 server:
   port: ${service.port.feign}
@@ -21,3 +25,5 @@ eureka:
       defaultZone: http://localhost:20000/eureka
 
 feign.hystrix.enabled: true
+
+testValueInFeign: ${testValue}

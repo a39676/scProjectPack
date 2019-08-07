@@ -27,8 +27,6 @@ dependencies {
     
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.0.9.RELEASE'
     
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '2.0.4.RELEASE'
-    
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.0.3.RELEASE'
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.6.RELEASE'
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.0.3.RELEASE'
