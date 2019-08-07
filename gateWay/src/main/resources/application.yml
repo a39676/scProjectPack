@@ -1,14 +1,16 @@
 # this is gateway project
 
 envName: dev
+branchName: dev
+
 spring:
   application:
     name: ${service.name.gateway}
   cloud:
     config:
       failFast: true
-      name: neo-config
-      label: master
+      name: config-file
+      label: ${branchName}
       profile: ${envName}
       discovery:
         enabled: true
