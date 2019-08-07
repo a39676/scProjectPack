@@ -1,0 +1,12 @@
+# this is demo project
+
+# spring:
+#   rabbitmq:
+#     host: ${service.mq.host}
+#     port: ${service.mq.port}
+#     username: ${service.mq.username}
+#     password: ${service.mq.password}
+mqhost: ${service.mq.host}
+mqport: ${service.mq.port}
+mqusername: ${service.mq.username}
+mqpassword: ${service.mq.password}
