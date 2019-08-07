@@ -22,6 +22,9 @@ public class TestController {
 	
 	@Value("${server.port}")
 	private String port;
+	
+	@Value("${testValue}")
+	private String testValue;
 
 	@Autowired
 	private TestService testService;
@@ -35,7 +38,7 @@ public class TestController {
 	@RequestMapping(Urls.hi)
 	@ResponseBody
     public String home(@RequestParam(value = "name", defaultValue = "tester") String name) {
-        return "hi " + name + " ,i am from port:" + port;
+        return "hi " + name + " ,i am from port:" + port + ", testValue: " + testValue;
     }
 	
 	@GetMapping("/roleMapper")
