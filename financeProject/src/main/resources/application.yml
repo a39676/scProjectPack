@@ -1,16 +1,18 @@
 # this is finance project
 
+envName: dev
 spring:
   application:
     name: ${service.name.finance}
   cloud:
     config:
+      failFast: true
       name: neo-config
       label: master
-      profile: dev
+      profile: ${envName}
       discovery:
         enabled: true
-        serviceId: config-server
+        serviceId: config-service
   redis:
     database: 0
     host: 127.0.0.1

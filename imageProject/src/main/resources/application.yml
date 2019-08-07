@@ -1,5 +1,6 @@
 # this is image project
 
+envName: dev
 spring:
   application:
     name: ${service.name.image}
@@ -7,7 +8,7 @@ spring:
     config:
       name: neo-config
       label: master
-      profile: dev
+      profile: ${envName}
       discovery:
         enabled: true
         serviceId: config-server

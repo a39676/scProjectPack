@@ -1,5 +1,6 @@
 # this is demo project
 
+envName: dev
 spring:
   application:
     name: ${service.name.hi}
@@ -8,15 +9,15 @@ spring:
       failFast: true
       name: neo-config
       label: master
-      profile: dev
+      profile: ${envName}
       discovery:
         enabled: true
         serviceId: config-service
   rabbitmq:
-    host: 45.76.205.204
-    port: 5672
-    username: 
-    password: 
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
 
   redis:
     database: 0

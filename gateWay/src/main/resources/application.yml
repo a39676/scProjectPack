@@ -1,5 +1,6 @@
 # this is gateway project
 
+envName: dev
 spring:
   application:
     name: ${service.name.gateway}
@@ -7,16 +8,16 @@ spring:
     config:
       failFast: true
       name: neo-config
-      label: dev
-      profile: dev
+      label: master
+      profile: ${envName}
       discovery:
         enabled: true
         serviceId: config-service
   rabbitmq:
-    host: 45.76.205.204
-    port: 5672
-    username: 
-    password: 
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
 
   redis:
     database: 0
