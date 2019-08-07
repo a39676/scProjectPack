@@ -1,18 +1,27 @@
 # this is demo project
 
 envName: dev
+branchName: dev
+
+testValue: ${testValue}
 spring:
   application:
     name: ${service.name.hi}
   cloud:
     config:
       failFast: true
-      name: neo-config
-      label: master
-      profile: dev
+      name: config-file
+      label: ${branchName}
+      profile: ${envName}
       discovery:
         enabled: true
         serviceId: config-service
+  rabbitmq:
+    host: ${rabbit_mq.host}
+    port: ${rabbit_mq.port}
+    username: ${rabbit_mq.username}
+    password: ${rabbit_mq.password}
+  
 
   redis:
     database: 0

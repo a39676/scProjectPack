@@ -64,20 +64,4 @@ public class TestController {
 		return m;
 	}
 	
-	@GetMapping("/mqConfig")
-	@ResponseBody
-	public String mqConfig() {
-		String m = "host: " + host + " port: " + port + " userName: " + username + " password: " + password;
-		return m;
-	}
-	
-	@Value("${mqhost}")
-	private String host;
-	@Value("${mqport}")
-	private String mqPort;
-	@Value("${mqusername}")
-	private String username;
-	@Value("${mqpassword}")
-	private String password;
-	
 }

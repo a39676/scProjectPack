@@ -5,7 +5,7 @@ spring:
     name: config-service
   cloud:
     config:
-      label: master
+      label: dev
       server:
         git:
           # 可配置远程/本地仓库 
