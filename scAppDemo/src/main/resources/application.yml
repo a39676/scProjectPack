@@ -14,10 +14,10 @@ spring:
         enabled: true
         serviceId: config-service
   rabbitmq:
-    host: ${rabbit_mq.host}
-    port: ${rabbit_mq.port}
-    username: ${rabbit_mq.username}
-    password: ${rabbit_mq.password}
+    host: ${rabbit_mq_config.host}
+    port: ${rabbit_mq_config.port}
+    username: ${rabbit_mq_config.username}
+    password: ${rabbit_mq_config.password}
 
   redis:
     database: 0

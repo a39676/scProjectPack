@@ -23,8 +23,8 @@ service:
     finance: 20020
     image: 20021
 
-rabbit_mq: 
-  port: 5672
+rabbit_mq_config: 
   host: 45.76.205.204
+  port: 5672
   username: u1
   password: something
