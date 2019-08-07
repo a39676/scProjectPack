@@ -18,7 +18,7 @@ import scAppDemo.test.service.TestService;
 @Controller
 @RefreshScope
 @RequestMapping({"/", "/test"})
-public class TestController {
+public class TestControllerDemo {
 	
 	@Value("${server.port}")
 	private String port;
