@@ -1,0 +1,2 @@
+rootProject.name = 'articleProject'
+includeFlat  'scCommon', 'scAppCommon'

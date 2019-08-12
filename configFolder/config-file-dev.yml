@@ -11,6 +11,7 @@ service:
     zuul: zuul-service
     finance: finance-service
     image: image-service
+    article: article-service
 
   port:
     hi: 20019
@@ -21,6 +22,7 @@ service:
     zuul: 20014
     finance: 20020
     image: 20021
+    article: 20022
 
 rabbit_mq: 
   host: 45.76.205.204
