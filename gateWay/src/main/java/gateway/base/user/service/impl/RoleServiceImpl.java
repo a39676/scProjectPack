@@ -9,14 +9,15 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
 
-import gateway.base.system.pojo.bo.SystemConstantStore;
-import gateway.base.system.service.SystemConstantService;
+import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.mapper.RolesMapper;
 import gateway.base.user.pojo.po.Roles;
 import gateway.base.user.pojo.type.RolesType;
 import gateway.base.user.service.RoleService;
 import gateway.common.service.CommonService;
 import net.sf.json.JSONArray;
+import systemConstant.pojo.bo.SystemConstantStore;
+import systemConstant.pojo.dto.SetSystemConstantDto;
 
 @Service
 public class RoleServiceImpl extends CommonService implements RoleService {
@@ -24,7 +25,7 @@ public class RoleServiceImpl extends CommonService implements RoleService {
 	@Autowired
 	private RolesMapper roleMapper;
 	@Autowired
-	private SystemConstantService constantService;
+	private SchedualServiceSystemConstant constantService;
 	
 	@Override
 	public void __initBaseRole() {
@@ -80,7 +81,10 @@ public class RoleServiceImpl extends CommonService implements RoleService {
 		List<Roles> roleList = getRoleListFromDB();
 		
 		JSONArray ja = JSONArray.fromObject(roleList);
-		constantService.setValByName(SystemConstantStore.roleList, ja.toString());
+		SetSystemConstantDto dto = new SetSystemConstantDto();
+		dto.setName(SystemConstantStore.roleList);
+		dto.setValue(ja.toString());
+		constantService.setValByName(dto);
 	}
 	
 	@Override

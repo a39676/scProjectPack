@@ -1,0 +1,57 @@
+// system constant project 
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+buildscript {
+	repositories {
+    	mavenCentral()
+    	jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.9.RELEASE")
+	}
+}
+
+bootJar {
+	baseName = 'systemConstantProject'
+	version = '0.0.1'
+}
+
+group = 'scDemo'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+		dirs 'libs/'
+    }
+}
+
+dependencies {
+    compile project(':scCommon')
+    compile project(':scAppCommon')
+    
+	// mysql
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+	
+	// swagger
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	
+	// for jsp
+	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.20'
+	compile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
+	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+	
+	compile group: 'org.apache.maven.plugins', name: 'maven-resources-plugin', version: '3.1.0'
+	
+}	

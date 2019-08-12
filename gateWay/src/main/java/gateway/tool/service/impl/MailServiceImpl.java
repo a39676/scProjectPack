@@ -29,8 +29,7 @@ import org.springframework.stereotype.Service;
 import dateHandle.DateUtilCustom;
 import emailHandle.MailHandle;
 import emailHandle.mailService.send.SendEmail;
-import gateway.base.system.pojo.bo.SystemConstantStore;
-import gateway.base.system.service.SystemConstantService;
+import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.pojo.bo.UserMailAndMailKeyBO;
 import gateway.base.user.service.UsersService;
 import gateway.common.constant.ResourceConstant;
@@ -45,12 +44,14 @@ import ioHandle.FileUtilCustom;
 import scAppCommon.constant.url.UsersUrlConstant;
 import scAppCommon.pojo.result.CommonResult;
 import scAppCommon.pojo.type.ResultType;
+import systemConstant.pojo.bo.SystemConstantStore;
+import systemConstant.pojo.dto.GetValsByNameDto;
 
 @Service
 public class MailServiceImpl extends CommonService implements MailService {
 
 	@Autowired
-	private SystemConstantService systemConstantService;
+	private SchedualServiceSystemConstant systemConstantService;
 	
 	@Autowired
 	private UsersService userService;
@@ -64,7 +65,9 @@ public class MailServiceImpl extends CommonService implements MailService {
 		if(redisTemplate.hasKey(SystemConstantStore.adminMailName) && redisTemplate.hasKey(SystemConstantStore.adminMailPwd)) {
 			return true;
 		} else {
-			systemConstantService.getValsByName(Arrays.asList(SystemConstantStore.adminMailName, SystemConstantStore.adminMailPwd));
+			GetValsByNameDto dto = new GetValsByNameDto();
+			dto.setConstantNames(Arrays.asList(SystemConstantStore.adminMailName, SystemConstantStore.adminMailPwd));
+			systemConstantService.getValsByName(dto);
 			if(redisTemplate.hasKey(SystemConstantStore.adminMailName) && redisTemplate.hasKey(SystemConstantStore.adminMailPwd)) {
 				return true;
 			} else {

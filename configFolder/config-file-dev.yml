@@ -12,6 +12,7 @@ service:
     finance: finance-service
     image: image-service
     article: article-service
+    systemConstant: system-constant-service
 
   port:
     hi: 20019
@@ -23,6 +24,7 @@ service:
     finance: 20020
     image: 20021
     article: 20022
+    systemConstant: 20023
 
 rabbit_mq: 
   host: 45.76.205.204

@@ -14,13 +14,13 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
-import gateway.base.system.pojo.bo.SystemConstantStore;
-import gateway.base.system.service.SystemConstantService;
+import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.pojo.dto.UserAttemptQuerayDTO;
 import gateway.base.user.pojo.po.UserAttempts;
 import gateway.base.user.service.UsersService;
 import numericHandel.NumericUtilCustom;
 import scAppCommon.pojo.type.ResultType;
+import systemConstant.pojo.bo.SystemConstantStore;
 
 @Component("authenticationProvider")
 public class LimitLoginAuthenticationProvider extends DaoAuthenticationProvider {
@@ -29,7 +29,7 @@ public class LimitLoginAuthenticationProvider extends DaoAuthenticationProvider 
 	private UsersService userService;
 
 	@Autowired
-	private SystemConstantService systemConstantService;
+	private SchedualServiceSystemConstant systemConstantService;
 	
 	@Autowired
 	@Qualifier("userDetailsService")

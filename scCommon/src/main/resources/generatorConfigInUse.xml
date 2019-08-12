@@ -28,7 +28,7 @@
         </javaTypeResolver>  
           
         <!-- 生成模型的包名和位置-->    
-        <javaModelGenerator targetPackage="articleProject.article.pojo.po" targetProject="articleProject">    
+        <javaModelGenerator targetPackage="systemConstantProject.systemConstant.pojo.po" targetProject="systemConstantProject">    
             <property name="enableSubPackages" value="true"/>    
             <property name="trimStrings" value="true"/> 
             <!-- for MyBatis3 / MyBatis3Simple
@@ -39,18 +39,18 @@
         </javaModelGenerator>    
         
         <!-- 生成映射文件的包名和位置-->    
-        <sqlMapGenerator targetPackage="articleProject.article.mapper" targetProject="articleProject">    
+        <sqlMapGenerator targetPackage="systemConstantProject.systemConstant.mapper" targetProject="systemConstantProject">    
             <property name="enableSubPackages" value="true"/>    
         </sqlMapGenerator>    
         
         <!-- 生成DAO的包名和位置-->    
-        <javaClientGenerator type="XMLMAPPER" targetPackage="articleProject.article.mapper" targetProject="articleProject">    
+        <javaClientGenerator type="XMLMAPPER" targetPackage="systemConstantProject.systemConstant.mapper" targetProject="systemConstantProject">    
             <property name="enableSubPackages" value="true"/>    
         </javaClientGenerator>
           
-        <table tableName="article_long">
-        	<property name="tableName" value="article_long"></property>
-        	<property name="domainObjectName" value="article_long" ></property>
+        <table tableName="systemConstant">
+        	<property name="tableName" value="systemConstant"></property>
+        	<property name="domainObjectName" value="SystemConstant" ></property>
             <property name="generatedKey" value="false"></property>
             <property name="enableSelectByPrimaryKey" value="true"></property>
             <property name="enableUpdateByPrimaryKey" value="true"></property>

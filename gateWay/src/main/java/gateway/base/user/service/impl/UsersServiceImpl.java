@@ -9,8 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import gateway.base.system.pojo.bo.SystemConstantStore;
-import gateway.base.system.service.SystemConstantService;
+import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.mapper.AuthMapper;
 import gateway.base.user.mapper.RolesMapper;
 import gateway.base.user.mapper.UsersDetailMapper;
@@ -28,6 +27,7 @@ import gateway.base.user.pojo.type.UserPrivateLevelType;
 import gateway.base.user.pojo.vo.UsersDetailVO;
 import gateway.base.user.service.UsersService;
 import scAppCommon.pojo.type.GenderType;
+import systemConstant.pojo.bo.SystemConstantStore;
 
 /**
  * @author Acorn 2017年4月13日
@@ -36,7 +36,7 @@ import scAppCommon.pojo.type.GenderType;
 public class UsersServiceImpl implements UsersService {
 
 	@Autowired
-	private SystemConstantService systemConstantService;
+	private SchedualServiceSystemConstant systemConstantService;
 	@Autowired
 	private UsersMapper usersMapper;
 	@Autowired

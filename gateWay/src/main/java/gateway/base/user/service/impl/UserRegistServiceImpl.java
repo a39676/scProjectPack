@@ -15,8 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import gateway.base.system.pojo.bo.SystemConstantStore;
-import gateway.base.system.service.SystemConstantService;
+import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.mapper.UserRegistMapper;
 import gateway.base.user.mapper.UsersDetailMapper;
 import gateway.base.user.mapper.UsersMapper;
@@ -44,6 +43,7 @@ import numericHandel.NumericUtilCustom;
 import scAppCommon.pojo.result.CommonResult;
 import scAppCommon.pojo.type.GenderType;
 import scAppCommon.pojo.type.ResultType;
+import systemConstant.pojo.bo.SystemConstantStore;
 
 @Service
 public class UserRegistServiceImpl extends CommonService implements UserRegistService {
@@ -58,7 +58,7 @@ public class UserRegistServiceImpl extends CommonService implements UserRegistSe
 	private UsersDetailMapper usersDetailMapper;
 	
 	@Autowired
-	private SystemConstantService systemConstantService;
+	private SchedualServiceSystemConstant systemConstantService;
 	@Autowired
 	private CustomPasswordEncoder passwordEncoder;
 	@Autowired

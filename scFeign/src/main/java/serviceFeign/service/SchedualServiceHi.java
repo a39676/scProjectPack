@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import constant.DemoUrls;
+import constant.ServiceName;
 import constant.Urls;
 import serviceFeign.service.impl.SchedualServiceHiHystric;
 
-@FeignClient(value = "${service.name.hi}", fallback = SchedualServiceHiHystric.class)
+@FeignClient(value = ServiceName.hi, fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
 	@GetMapping(value = Urls.hi)
