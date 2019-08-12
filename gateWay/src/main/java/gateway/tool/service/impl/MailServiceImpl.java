@@ -26,6 +26,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
+import common.result.CommonResult;
+import common.type.ResultType;
 import dateHandle.DateUtilCustom;
 import emailHandle.MailHandle;
 import emailHandle.mailService.send.SendEmail;
@@ -42,8 +44,6 @@ import gateway.tool.pojo.type.MailType;
 import gateway.tool.service.MailService;
 import ioHandle.FileUtilCustom;
 import scAppCommon.constant.url.UsersUrlConstant;
-import scAppCommon.pojo.result.CommonResult;
-import scAppCommon.pojo.type.ResultType;
 import systemConstant.pojo.bo.SystemConstantStore;
 import systemConstant.pojo.dto.GetValsByNameDto;
 

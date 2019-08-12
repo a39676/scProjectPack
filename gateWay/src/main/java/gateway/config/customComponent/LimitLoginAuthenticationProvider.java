@@ -14,12 +14,12 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
+import common.type.ResultType;
 import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.pojo.dto.UserAttemptQuerayDTO;
 import gateway.base.user.pojo.po.UserAttempts;
 import gateway.base.user.service.UsersService;
 import numericHandel.NumericUtilCustom;
-import scAppCommon.pojo.type.ResultType;
 import systemConstant.pojo.bo.SystemConstantStore;
 
 @Component("authenticationProvider")

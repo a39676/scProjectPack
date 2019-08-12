@@ -1,8 +1,8 @@
 package gateway.base.user.service;
 
+import common.result.CommonResult;
 import gateway.base.user.pojo.dto.UserRegistDTO;
 import gateway.base.user.pojo.vo.__baseSuperAdminRegistVO;
-import scAppCommon.pojo.result.CommonResult;
 
 public interface UserRegistService {
 

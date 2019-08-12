@@ -4,9 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import constant.DemoUrls;
-import constant.ServiceName;
-import constant.Urls;
+import common.constant.ServiceName;
+import common.constant.url.DemoUrls;
+import common.constant.url.Urls;
 import serviceFeign.service.impl.SchedualServiceHiHystric;
 
 @FeignClient(value = ServiceName.hi, fallback = SchedualServiceHiHystric.class)

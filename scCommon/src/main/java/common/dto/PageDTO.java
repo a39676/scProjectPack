@@ -1,4 +1,4 @@
-package scAppCommon.pojo.dto;
+package common.dto;
 
 public abstract class PageDTO {
 

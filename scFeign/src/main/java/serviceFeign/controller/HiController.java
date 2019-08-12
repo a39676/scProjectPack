@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import constant.DemoUrls;
-import constant.Urls;
+import common.constant.url.DemoUrls;
+import common.constant.url.Urls;
 import serviceFeign.service.SchedualServiceHi;
 
 @RestController

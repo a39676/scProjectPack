@@ -8,10 +8,10 @@ import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.search.SearchTerm;
 
+import common.result.CommonResult;
 import gateway.base.user.pojo.bo.UserMailAndMailKeyBO;
 import gateway.tool.pojo.po.MailRecord;
 import gateway.tool.pojo.type.MailType;
-import scAppCommon.pojo.result.CommonResult;
 
 public interface MailService {
 

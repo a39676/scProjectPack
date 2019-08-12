@@ -1,4 +1,4 @@
-package constant;
+package common.constant.url;
 
 public class Urls {
 	

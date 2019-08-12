@@ -15,6 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import common.result.CommonResult;
+import common.type.GenderType;
+import common.type.ResultType;
 import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.mapper.UserRegistMapper;
 import gateway.base.user.mapper.UsersDetailMapper;
@@ -40,9 +43,6 @@ import gateway.tool.pojo.type.MailType;
 import gateway.tool.service.impl.MailServiceImpl;
 import net.sf.json.JSONObject;
 import numericHandel.NumericUtilCustom;
-import scAppCommon.pojo.result.CommonResult;
-import scAppCommon.pojo.type.GenderType;
-import scAppCommon.pojo.type.ResultType;
 import systemConstant.pojo.bo.SystemConstantStore;
 
 @Service

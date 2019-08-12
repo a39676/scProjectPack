@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import scAppCommon.pojo.dto.PageParam;
-import scAppCommon.pojo.result.CommonResult;
-import scAppCommon.pojo.type.ResultType;
+import common.dto.PageParam;
+import common.result.CommonResult;
+import common.type.ResultType;
 
-public abstract class GlobalCommonService {
+public abstract class AppCommonService {
 
 protected final Logger log = LoggerFactory.getLogger(getClass());
 	

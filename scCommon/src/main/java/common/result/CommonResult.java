@@ -1,7 +1,8 @@
-package scAppCommon.pojo.result;
+package common.result;
 
 import org.apache.poi.ss.formula.functions.T;
 
 public class CommonResult extends CommonResultBase<T> {
+
 
 }

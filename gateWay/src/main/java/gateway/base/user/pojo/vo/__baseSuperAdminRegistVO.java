@@ -1,6 +1,6 @@
 package gateway.base.user.pojo.vo;
 
-import scAppCommon.pojo.result.CommonResult;
+import common.result.CommonResult;
 
 public class __baseSuperAdminRegistVO extends CommonResult {
 

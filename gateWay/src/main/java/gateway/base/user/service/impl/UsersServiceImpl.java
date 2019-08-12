@@ -9,6 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import common.type.GenderType;
 import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.mapper.AuthMapper;
 import gateway.base.user.mapper.RolesMapper;
@@ -26,7 +27,6 @@ import gateway.base.user.pojo.po.UsersDetail;
 import gateway.base.user.pojo.type.UserPrivateLevelType;
 import gateway.base.user.pojo.vo.UsersDetailVO;
 import gateway.base.user.service.UsersService;
-import scAppCommon.pojo.type.GenderType;
 import systemConstant.pojo.bo.SystemConstantStore;
 
 /**

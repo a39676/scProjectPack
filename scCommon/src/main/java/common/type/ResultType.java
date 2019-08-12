@@ -1,4 +1,4 @@
-package scAppCommon.pojo.type;
+package common.type;
 
 public enum ResultType {
 	

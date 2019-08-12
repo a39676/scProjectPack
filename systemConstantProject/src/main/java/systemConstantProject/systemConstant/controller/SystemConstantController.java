@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import constant.SystemConstantUrl;
+import common.constant.url.SystemConstantUrl;
 import systemConstant.pojo.dto.GetValsByNameDto;
 import systemConstant.pojo.dto.SetSystemConstantDto;
 import systemConstant.pojo.dto.SetSystemConstantsDto;

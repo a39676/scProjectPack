@@ -12,8 +12,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
+import common.result.CommonResult;
 import net.sf.json.JSONObject;
-import scAppCommon.pojo.result.CommonResult;
 
 @Component
 public class CustomAuthenticationFailHandler implements AuthenticationFailureHandler {

@@ -18,11 +18,11 @@ import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
+import common.result.CommonResult;
 import gateway.base.user.mapper.UsersMapper;
 import gateway.base.user.pojo.po.UsersDetail;
 import gateway.util.BaseUtilCustom;
 import net.sf.json.JSONObject;
-import scAppCommon.pojo.result.CommonResult;
 
 @Component
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {

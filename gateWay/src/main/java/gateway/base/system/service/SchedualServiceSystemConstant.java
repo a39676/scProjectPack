@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import constant.ServiceName;
-import constant.SystemConstantUrl;
+import common.constant.ServiceName;
+import common.constant.url.SystemConstantUrl;
 import gateway.base.system.service.impl.SchedualServiceSystemConstantHystric;
 import systemConstant.pojo.dto.GetValsByNameDto;
 import systemConstant.pojo.dto.SetSystemConstantDto;
