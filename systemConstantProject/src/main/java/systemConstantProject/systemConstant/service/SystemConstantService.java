@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import systemConstant.pojo.dto.GetValsByNameDto;
 import systemConstant.pojo.dto.SetSystemConstantDto;
 import systemConstant.pojo.dto.SetSystemConstantsDto;
+import systemConstant.pojo.result.GetValByNameResult;
 import systemConstantProject.systemConstant.mapper.SystemConstantMapper;
 import systemConstantProject.systemConstant.pojo.bo.SystemConstantStore;
 import systemConstantProject.systemConstant.pojo.po.SystemConstant;
@@ -38,24 +39,28 @@ protected final Logger log = LoggerFactory.getLogger(getClass());
 	@Autowired
 	private SystemConstantMapper systemConstantMapper;
 	
-	public String getValByName(String constantName) {
+	public GetValByNameResult getValByName(String constantName) {
+		GetValByNameResult result = new GetValByNameResult();
+		
 		if(StringUtils.isBlank(constantName)) {
-			return "";
+			return result;
 		}
 		
 		if(redisTemplate.hasKey(constantName)) {
-			return String.valueOf(redisTemplate.opsForValue().get(constantName));
+			result.setValue(String.valueOf(redisTemplate.opsForValue().get(constantName)));
 		} else {
 			SystemConstant tmpConstant = systemConstantMapper.getValByName(constantName);
 			if(tmpConstant == null || StringUtils.isBlank(tmpConstant.getConstantValue())) {
-				return "";
+				return result;
 			}
 			redisTemplate.opsForValue().set(tmpConstant.getConstantName(), tmpConstant.getConstantValue());
-			return tmpConstant.getConstantValue();
+			result.setValue(tmpConstant.getConstantValue());
 		}
+		
+		return result;
 	}
 	
-	public String getValByName(String constantName, boolean refreshFlag) {
+	public GetValByNameResult getValByName(String constantName, boolean refreshFlag) {
 		if(refreshFlag) {
 			redisTemplate.delete(constantName);
 		}

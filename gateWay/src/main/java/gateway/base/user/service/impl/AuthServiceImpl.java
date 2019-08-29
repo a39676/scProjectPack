@@ -18,10 +18,10 @@ import gateway.base.user.pojo.type.RolesType;
 import gateway.base.user.service.AuthRoleService;
 import gateway.base.user.service.AuthService;
 import gateway.base.user.service.RoleService;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 
 @Service
-public class AuthServiceImpl extends CommonService implements AuthService {
+public class AuthServiceImpl extends GatewayCommonService implements AuthService {
 
 	private static final Logger log = LoggerFactory.getLogger(AuthServiceImpl.class);
 	

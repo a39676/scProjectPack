@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import com.rabbitmq.client.Channel;
 
-import scAppCommon.constant.MQQueueConstant;
+import common.constant.mq.MQQueueConstant;
 
 @Component
 @RabbitListener(queues = MQQueueConstant.helloAck)

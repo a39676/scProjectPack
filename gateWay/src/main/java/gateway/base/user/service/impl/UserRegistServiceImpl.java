@@ -36,7 +36,7 @@ import gateway.base.user.pojo.vo.__baseSuperAdminRegistVO;
 import gateway.base.user.service.RoleService;
 import gateway.base.user.service.UserAuthService;
 import gateway.base.user.service.UserRegistService;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 import gateway.config.customComponent.CustomPasswordEncoder;
 import gateway.tool.pojo.po.MailRecord;
 import gateway.tool.pojo.type.MailType;
@@ -46,7 +46,7 @@ import numericHandel.NumericUtilCustom;
 import systemConstant.pojo.bo.SystemConstantStore;
 
 @Service
-public class UserRegistServiceImpl extends CommonService implements UserRegistService {
+public class UserRegistServiceImpl extends GatewayCommonService implements UserRegistService {
 
 	@Autowired
 	private UserRegistMapper userRegistMapper;

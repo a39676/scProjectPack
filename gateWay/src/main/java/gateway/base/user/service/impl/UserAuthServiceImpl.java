@@ -14,11 +14,11 @@ import gateway.base.user.pojo.po.UserAuthExample;
 import gateway.base.user.pojo.type.AuthType;
 import gateway.base.user.service.AuthService;
 import gateway.base.user.service.UserAuthService;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 import gateway.util.BaseUtilCustom;
 
 @Service
-public class UserAuthServiceImpl extends CommonService implements UserAuthService {
+public class UserAuthServiceImpl extends GatewayCommonService implements UserAuthService {
 
 	private static final Logger log = LoggerFactory.getLogger(UserAuthServiceImpl.class);
 

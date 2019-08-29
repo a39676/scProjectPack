@@ -4,7 +4,7 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import scAppCommon.constant.MQQueueConstant;
+import common.constant.mq.MQQueueConstant;
 
 @Configuration
 public class RabbitConfig {

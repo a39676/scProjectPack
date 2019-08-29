@@ -4,7 +4,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import scAppCommon.constant.MQQueueConstant;
+import common.constant.mq.MQQueueConstant;
 
 @Component
 @RabbitListener(queues = MQQueueConstant.hello)

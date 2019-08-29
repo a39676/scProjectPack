@@ -14,13 +14,13 @@ import gateway.base.user.mapper.RolesMapper;
 import gateway.base.user.pojo.po.Roles;
 import gateway.base.user.pojo.type.RolesType;
 import gateway.base.user.service.RoleService;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 import net.sf.json.JSONArray;
 import systemConstant.pojo.bo.SystemConstantStore;
 import systemConstant.pojo.dto.SetSystemConstantDto;
 
 @Service
-public class RoleServiceImpl extends CommonService implements RoleService {
+public class RoleServiceImpl extends GatewayCommonService implements RoleService {
 
 	@Autowired
 	private RolesMapper roleMapper;

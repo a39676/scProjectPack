@@ -26,6 +26,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
+import common.constant.url.UsersUrlConstant;
 import common.result.CommonResult;
 import common.type.ResultType;
 import dateHandle.DateUtilCustom;
@@ -35,7 +36,7 @@ import gateway.base.system.service.SchedualServiceSystemConstant;
 import gateway.base.user.pojo.bo.UserMailAndMailKeyBO;
 import gateway.base.user.service.UsersService;
 import gateway.common.constant.ResourceConstant;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 import gateway.tool.mapper.MailRecordMapper;
 import gateway.tool.pojo.constant.ToolPathConstant;
 import gateway.tool.pojo.param.InsertNewMailRecordParam;
@@ -43,12 +44,11 @@ import gateway.tool.pojo.po.MailRecord;
 import gateway.tool.pojo.type.MailType;
 import gateway.tool.service.MailService;
 import ioHandle.FileUtilCustom;
-import scAppCommon.constant.url.UsersUrlConstant;
 import systemConstant.pojo.bo.SystemConstantStore;
 import systemConstant.pojo.dto.GetValsByNameDto;
 
 @Service
-public class MailServiceImpl extends CommonService implements MailService {
+public class MailServiceImpl extends GatewayCommonService implements MailService {
 
 	@Autowired
 	private SchedualServiceSystemConstant systemConstantService;

@@ -13,6 +13,7 @@ import common.constant.url.SystemConstantUrl;
 import systemConstant.pojo.dto.GetValsByNameDto;
 import systemConstant.pojo.dto.SetSystemConstantDto;
 import systemConstant.pojo.dto.SetSystemConstantsDto;
+import systemConstant.pojo.result.GetValByNameResult;
 import systemConstantProject.systemConstant.service.SystemConstantService;
 
 @RestController
@@ -24,13 +25,13 @@ public class SystemConstantController {
 	
 	@PostMapping(SystemConstantUrl.getValByName)
 	@ResponseBody
-	public String getValByName(@RequestBody String constantName) {
+	public GetValByNameResult getValByName(@RequestBody String constantName) {
 		return constantService.getValByName(constantName);
 	}
 	
 	@PostMapping(SystemConstantUrl.getValByNameRefresh)
 	@ResponseBody
-	public String getValByNameRefresh(@RequestBody String constantName) {
+	public GetValByNameResult getValByNameRefresh(@RequestBody String constantName) {
 		return constantService.getValByName(constantName, true);
 	}
 	

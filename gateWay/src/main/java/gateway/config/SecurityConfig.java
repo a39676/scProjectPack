@@ -17,6 +17,16 @@ import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
+import common.constant.url.AdminUrlConstant;
+import common.constant.url.ArticleAdminCommentUrlConstant;
+import common.constant.url.ArticleAdminUrlConstant;
+import common.constant.url.ArticleUrlConstant;
+import common.constant.url.FakeFTPUrlConstant;
+import common.constant.url.LoginUrlConstant;
+import common.constant.url.ToolUrlConstant;
+import common.constant.url.UploadUrlConstant;
+import common.constant.url.UsersUrlConstant;
+import common.constant.url.WXUrl;
 import gateway.base.user.pojo.type.RolesType;
 import gateway.base.user.service.impl.CustomAuthenticationFailHandler;
 import gateway.base.user.service.impl.CustomAuthenticationSuccessHandler;
@@ -24,16 +34,6 @@ import gateway.base.user.service.impl.CustomUserDetailsService;
 import gateway.config.customComponent.CustomAuthenticationProvider;
 import gateway.config.customComponent.CustomPasswordEncoder;
 import gateway.config.customComponent.LimitLoginAuthenticationProvider;
-import scAppCommon.constant.url.AdminUrlConstant;
-import scAppCommon.constant.url.ArticleAdminCommentUrlConstant;
-import scAppCommon.constant.url.ArticleAdminUrlConstant;
-import scAppCommon.constant.url.ArticleUrlConstant;
-import scAppCommon.constant.url.FakeFTPUrlConstant;
-import scAppCommon.constant.url.LoginUrlConstant;
-import scAppCommon.constant.url.ToolUrlConstant;
-import scAppCommon.constant.url.UploadUrlConstant;
-import scAppCommon.constant.url.UsersUrlConstant;
-import scAppCommon.constant.url.WXUrl;
 
 @Configuration
 @EnableWebSecurity

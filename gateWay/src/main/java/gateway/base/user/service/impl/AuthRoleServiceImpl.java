@@ -12,10 +12,10 @@ import gateway.base.user.mapper.AuthRoleMapper;
 import gateway.base.user.pojo.po.AuthRole;
 import gateway.base.user.pojo.po.AuthRoleExample;
 import gateway.base.user.service.AuthRoleService;
-import gateway.common.service.CommonService;
+import gateway.common.service.GatewayCommonService;
 
 @Service
-public class AuthRoleServiceImpl extends CommonService implements AuthRoleService {
+public class AuthRoleServiceImpl extends GatewayCommonService implements AuthRoleService {
 	
 	private static final Logger log = LoggerFactory.getLogger(AuthRoleServiceImpl.class);
 
