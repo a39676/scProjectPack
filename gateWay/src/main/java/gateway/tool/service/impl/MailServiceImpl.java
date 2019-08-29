@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
 import common.constant.url.UsersUrlConstant;
 import common.result.CommonResult;
 import common.type.ResultType;
-import dateHandle.DateUtilCustom;
+import dateTimeHandle.DateUtilCustom;
 import emailHandle.MailHandle;
 import emailHandle.mailService.send.SendEmail;
 import gateway.base.system.service.SchedualServiceSystemConstant;
@@ -76,7 +76,7 @@ public class MailServiceImpl extends GatewayCommonService implements MailService
 		}
 	}
 	
-	
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendSimpleMail(Long userId, String sendTo, String title, String content, String mailKey, MailType mailType) {
 		CommonResult result = new CommonResult();
 		if(userId == null || mailType == null || mailType.getCode() == null) {
@@ -308,6 +308,7 @@ public class MailServiceImpl extends GatewayCommonService implements MailService
 	}
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendForgotPasswordMail(Long userId, String email, String hostName) {
 		CommonResult result = new CommonResult();
 		if(userId == null || StringUtils.isBlank(email)) {
@@ -355,6 +356,7 @@ public class MailServiceImpl extends GatewayCommonService implements MailService
 	}
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendForgotUsernameMail(String userName, String email, String hostName) {
 		CommonResult result = new CommonResult();
 		if(StringUtils.isBlank(userName) || StringUtils.isBlank(email)) {

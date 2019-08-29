@@ -30,8 +30,10 @@ public interface MailService {
 
 	int updateWasUsed(Integer mailId);
 
+	@SuppressWarnings("rawtypes")
 	CommonResult sendForgotPasswordMail(Long userId, String email, String hostName);
 	
+	@SuppressWarnings("rawtypes")
 	CommonResult sendForgotUsernameMail(String userName, String email, String hostName);
 
 	MailRecord findRegistActivationUnusedByUserId(Long userId);

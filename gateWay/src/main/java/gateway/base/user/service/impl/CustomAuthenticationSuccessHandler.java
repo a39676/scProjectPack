@@ -18,11 +18,12 @@ import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
+import com.google.gson.Gson;
+
 import common.result.CommonResult;
 import gateway.base.user.mapper.UsersMapper;
 import gateway.base.user.pojo.po.UsersDetail;
 import gateway.util.BaseUtilCustom;
-import net.sf.json.JSONObject;
 
 @Component
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
@@ -78,9 +79,10 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 		}
 
 //		redirectStrategy.sendRedirect(request, response, targetUrl);
+		@SuppressWarnings("rawtypes")
 		CommonResult result = new CommonResult();
 		result.successWithMessage("/");
-		response.getWriter().println(JSONObject.fromObject(result));
+		response.getWriter().println(new Gson().toJson(result));
 		return;
 	}
 

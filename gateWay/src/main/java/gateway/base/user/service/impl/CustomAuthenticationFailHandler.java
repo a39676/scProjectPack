@@ -12,8 +12,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
+import com.google.gson.Gson;
+
 import common.result.CommonResult;
-import net.sf.json.JSONObject;
 
 @Component
 public class CustomAuthenticationFailHandler implements AuthenticationFailureHandler {
@@ -23,9 +24,12 @@ public class CustomAuthenticationFailHandler implements AuthenticationFailureHan
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException authenticationException) throws IOException, ServletException {
+		@SuppressWarnings("rawtypes")
 		CommonResult result = new CommonResult();
 		result.failWithMessage(authenticationException.getMessage());
-		response.getWriter().println(JSONObject.fromObject(result));
+		Gson g = new Gson();
+		g.toJson(result);
+		response.getWriter().println(g);
 	}
 
 }

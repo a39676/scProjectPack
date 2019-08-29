@@ -2,7 +2,7 @@ package systemConstant.pojo.result;
 
 import common.result.CommonResult;
 
-public class GetValByNameResult extends CommonResult {
+public class GetValByNameResult extends CommonResult<Object> {
 
 	private String value;
 

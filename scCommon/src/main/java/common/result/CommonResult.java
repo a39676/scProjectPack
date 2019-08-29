@@ -1,8 +1,5 @@
 package common.result;
 
-import org.apache.poi.ss.formula.functions.T;
-
-public class CommonResult extends CommonResultBase<T> {
-
+public class CommonResult<T> extends CommonResultBase<T> {
 
 }

@@ -2,7 +2,7 @@ package gateway.base.user.pojo.vo;
 
 import common.result.CommonResult;
 
-public class __baseSuperAdminRegistVO extends CommonResult {
+public class __baseSuperAdminRegistVO extends CommonResult<Object> {
 
 	private Long newSuperAdminId;
 

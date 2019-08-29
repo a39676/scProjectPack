@@ -4,6 +4,7 @@ import common.result.CommonResult;
 import gateway.base.user.pojo.dto.UserRegistDTO;
 import gateway.base.user.pojo.vo.__baseSuperAdminRegistVO;
 
+@SuppressWarnings("rawtypes")
 public interface UserRegistService {
 
 	CommonResult newUserRegist(UserRegistDTO param, String ip);

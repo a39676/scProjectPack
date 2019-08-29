@@ -39,6 +39,7 @@ repositories {
 dependencies {
     compile project(':scCommon')
     compile project(':scAppCommon')
+    compile project(':toolPacksG')
     
 	// mysql
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'

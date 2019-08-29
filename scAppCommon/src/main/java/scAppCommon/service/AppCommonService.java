@@ -50,30 +50,35 @@ protected final Logger log = LoggerFactory.getLogger(getClass());
 		return pp;
 	}
 
+	@SuppressWarnings("rawtypes")
 	protected CommonResult nullParam() {
 		CommonResult result = new CommonResult();
 		result.fillWithResult(ResultType.nullParam);
 		return result;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	protected CommonResult errorParam() {
 		CommonResult result = new CommonResult();
 		result.fillWithResult(ResultType.errorParam);
 		return result;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	protected CommonResult serviceError() {
 		CommonResult result = new CommonResult();
 		result.fillWithResult(ResultType.serviceError);
 		return result;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	protected CommonResult normalSuccess() {
 		CommonResult result = new CommonResult();
 		result.normalSuccess();
 		return result;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	protected CommonResult notLogin() {
 		CommonResult result = new CommonResult();
 		result.failWithMessage("请登录后操作");

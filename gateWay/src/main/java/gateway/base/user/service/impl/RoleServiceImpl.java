@@ -80,10 +80,9 @@ public class RoleServiceImpl extends GatewayCommonService implements RoleService
 	private void setRoleListFromDBToRedis() {
 		List<Roles> roleList = getRoleListFromDB();
 		
-		JSONArray ja = JSONArray.fromObject(roleList);
 		SetSystemConstantDto dto = new SetSystemConstantDto();
 		dto.setName(SystemConstantStore.roleList);
-		dto.setValue(ja.toString());
+		dto.setValue(roleList.toString());
 		constantService.setValByName(dto);
 	}
 	
@@ -118,4 +117,5 @@ public class RoleServiceImpl extends GatewayCommonService implements RoleService
 		
 		return roleList;
 	}
+	
 }

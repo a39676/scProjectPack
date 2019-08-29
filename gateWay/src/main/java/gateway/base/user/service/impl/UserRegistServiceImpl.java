@@ -72,6 +72,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	private static List<UserMailAndMailKeyBO> mailRecordList = new ArrayList<UserMailAndMailKeyBO>();
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	@Transactional(value = "transactionManager", rollbackFor = Exception.class)
 	public CommonResult newUserRegist(UserRegistDTO param, String ip) {
 		CommonResult result = new CommonResult();
@@ -369,6 +370,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
     	return user;
     }
 	
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendRegistMail(Long userId, String sendTo, String nickName) {
 		/*
 		 * 暂时不再主动发送激活邮件,改由用户发回激活邮件  2018-06-28
@@ -378,6 +380,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	}
 
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult modifyRegistEmail(Long userId, String email) {
 		/*
 		 * 暂时不再主动发送激活邮件,改由用户发回激活邮件  2018-06-28
@@ -396,7 +399,6 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 //		
 //		result = resendRegistMail(userId);
 //		return result;
-		
 		CommonResult result = new CommonResult();
 		if(userId == null || !validEmail(email)) {
 			result.fillWithResult(ResultType.errorParam);
@@ -426,6 +428,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	}
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult registActivation(String mailKey, String activeEMail) {
 		CommonResult result = new CommonResult();
 		if(StringUtils.isBlank(mailKey)) {
@@ -548,6 +551,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
  */
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendForgotPasswordMail(String email, String hostName) {
 		CommonResult result = new CommonResult();
 		if(StringUtils.isBlank(email)) {
@@ -584,6 +588,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	}
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult sendForgotUsernameMail(String email, String hostName) {
 		CommonResult result = new CommonResult();
 		if(StringUtils.isBlank(email)) {
@@ -620,6 +625,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 		return result;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	private CommonResult resetPassword(Long userId, String newPassword, String newPasswordRepeat) {
 		CommonResult result = new CommonResult();
 		if (!validPassword(newPassword)) {
@@ -649,6 +655,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	}
 	
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult resetPasswordByMailKey(String mailKey, String newPassword, String newPasswordRepeat) {
 		CommonResult result  = new CommonResult();
 		if(StringUtils.isBlank(mailKey)) {
@@ -682,6 +689,7 @@ public class UserRegistServiceImpl extends GatewayCommonService implements UserR
 	}
 
 	@Override
+	@SuppressWarnings("rawtypes")
 	public CommonResult resetPasswordByLoginUser(Long userId, String oldPassword, String newPassword, String newPasswordRepeat) {
 		CommonResult result = new CommonResult();
 		String encodePassword = passwordEncoder.encode(oldPassword);
